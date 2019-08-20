@@ -5,7 +5,8 @@ Created on Tue Aug 13 13:38:47 2019
 @author: PAT
 """
 
-
+import warnings
+warnings.filterwarnings("ignore")
 import os
 import sys
 from sklearn.datasets import load_iris
@@ -30,13 +31,16 @@ from sklearn.feature_selection import chi2
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import KFold
 
+from sklearn.metrics import roc_curve,roc_auc_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 
 import sklearn
+from sklearn.datasets import load_breast_cancer
 import plotly.graph_objs as go
 import plotly.offline as py
+
 
 # add to sys paths
 #sys.path.append('C:\\Users\\PAT\\Documents\\edwisor\\projects\\bigmart_sales')
